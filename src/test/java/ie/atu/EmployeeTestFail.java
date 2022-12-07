@@ -17,6 +17,12 @@ class EmployeeTestFail {
         assertEquals("Name provided is not valid", exMessage.getMessage());
     }
 
+    @Test
+    void testPpsidFail(){
+        Exception exMessage = assertThrows(IllegalArgumentException.class, () -> new Employee("Denis", "12345"));
+        assertEquals("Employee PPS should be 6 characters", exMessage.getMessage());
+    }
+
     @AfterEach
     void tearDown() {
     }

@@ -6,7 +6,7 @@ public class Employee {
 
     public Employee(String name, String ppsid) {
         setName(name);
-        this.ppsid = ppsid;
+        setPpsid(ppsid);
     }
 
     public void setName(String name) {
@@ -21,6 +21,19 @@ public class Employee {
     public String getName()
     {
         return name;
+    }
+
+    public String getPpsid() {
+        return ppsid;
+    }
+
+    public void setPpsid(String ppsid) {
+        if(ppsid.length() == 6) {
+            this.ppsid = ppsid;
+        }
+        else{
+            throw new IllegalArgumentException("Employee PPS should be 6 characters");
+        }
     }
 }
 
