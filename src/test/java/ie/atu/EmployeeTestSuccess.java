@@ -14,9 +14,15 @@ class EmployeeTestSuccess<assertEquals> {
     }
 
     @Test
-    public void testNameSuccess(){
+     void testNameSuccess(){
         Employee myEmployee = new Employee("Denis", "123456");
         assertEquals("Denis", myEmployee.getName());
+    }
+
+    @Test
+    void testPpsidSuccess(){
+        Employee myEmployee = new Employee("Cathal", "654321");
+        assertEquals("654321", myEmployee.getPpsid());
     }
 
 
